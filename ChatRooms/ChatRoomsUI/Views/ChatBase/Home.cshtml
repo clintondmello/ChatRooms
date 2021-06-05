@@ -1,26 +1,19 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Home";
+    Layout = "_Layout";
 }
 
-
-<div class="container">
-    <div class="row">&nbsp;</div>
-    <div class="row">
-        <div class="col-2">User</div>
-        <div class="col-4"><input type="text" id="userInput" /></div>
-    </div>
-    <div class="row">
-        <div class="col-2">Message</div>
-        <div class="col-4"><input type="text" id="messageInput" /></div>
-    </div>
-    <div class="row">&nbsp;</div>
-    <div class="row">
-        <div class="col-6">
-            <input type="button" id="sendButton" value="Send Message" />
-        </div>
-    </div>
+<div class="form-group">
+    <label for="userInput">UserName</label>
+    <input type="text" class="form-control" id="userInput" aria-describedby="userHelp" placeholder="Enter username.">
+    <small id="userHelp" class="form-text text-muted">Your username will be visible to other users.</small>
 </div>
+<div class="form-group">
+    <label for="messageInput">Message</label>
+    <input type="text" class="form-control" id="messageInput" placeholder="Enter message">
+</div>
+<button type="button" class="btn btn-primary" id="sendButton">Submit</button>
+
 <div class="row">
     <div class="col-12">
         <hr />

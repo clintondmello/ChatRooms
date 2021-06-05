@@ -11,8 +11,17 @@ connection.on("RecieveMessage", function (user, message) {
 
 connection.start().then(function () {
     document.getElementById("sendButton").disabled = false;
+    connection.invoke("NewUser", connection.connectionId).catch(function (err) {
+        return console.err(err.toString());
+    })
 }).catch(function (err) {
     return console.error(err.toString());
+});
+
+connection.on("UserJoined", function (connectionId) {
+    var li = document.createElement("li");
+    document.getElementById("messagesList").appendChild(li);
+    li.textContent = `${connectionId} joined the chat`;
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {

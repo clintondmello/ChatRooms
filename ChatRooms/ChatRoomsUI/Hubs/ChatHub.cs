@@ -9,5 +9,11 @@ namespace ChatRoomsUI.Hubs
         {
             await Clients.All.SendAsync("RecieveMessage", user, message);
         }
+
+        public async Task NewUser(string connectionId)
+        {
+            await Clients.Others.SendAsync("UserJoined", connectionId);
+        }
+
     }
 }
