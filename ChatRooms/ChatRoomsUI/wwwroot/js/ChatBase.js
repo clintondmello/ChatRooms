@@ -11,17 +11,24 @@ connection.on("RecieveMessage", function (user, message) {
 
 connection.start().then(function () {
     document.getElementById("sendButton").disabled = false;
-    connection.invoke("NewUser", connection.connectionId).catch(function (err) {
+    connection.invoke("NewUser", { ConnectionId: connection.connectionId, UserName: document.getElementById("userInput").value }).catch(function (err) {
         return console.err(err.toString());
     })
 }).catch(function (err) {
     return console.error(err.toString());
 });
 
-connection.on("UserJoined", function (connectionId) {
+connection.on("UserJoined", function (userDetails) {
     var li = document.createElement("li");
     document.getElementById("messagesList").appendChild(li);
-    li.textContent = `${connectionId} joined the chat`;
+    li.textContent = `${userDetails.userName} joined the chat`;
+});
+
+connection.on("UserDisconnected", function (user) {
+    debugger;
+    var li = document.createElement("li");
+    document.getElementById("messagesList").appendChild(li);
+    li.textContent = `${user} left the chat`;
 });
 
 document.getElementById("sendButton").addEventListener("click", function (event) {
