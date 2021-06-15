@@ -32,64 +32,102 @@
                 </div>
             </div>
         </div>
-
-        @*$('#loginModal').modal('show');*@
-        <div class="modal fade" id="loginModal" role="dialog">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <form class="needs-validation" novalidate>
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="usernameInput" class="form-label">Username</label>
-                                            <input type="text" class="form-control" id="usernameInput" required>
-                                            <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Please provide a username.</div>
-                                        </div>
-                                        <div class="col">
-                                            <label for="groupNameInput" class="form-label">Group Name</label>
-                                            <input type="text" class="form-control" id="groupNameInput" required>
-                                            <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Please provide an existing Group name.</div>
-                                        </div>
+        @RenderBody()
+    </div>
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content shadow" style="height:440px;">
+                <div class="modal-body p-0">
+                    <div class="row h-100">
+                        <div class="col-6">
+                            <img src="~/images/Welcome.jpg" style="background-repeat:no-repeat;height:100%;width:100%; max-height:440px;" />
+                        </div>
+                        <div class="col-6">
+                            <form class="needs-validation m-auto mt-4" novalidate>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p style="font-size:xx-large;font-weight:900;text-align: center;">
+                                            Wassup!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11">
+                                        <label for="usernameInput" class="form-label">Username</label>
+                                        <input type="text" class="form-control" id="usernameInput" required>
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">Please provide a username.</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11">
+                                        <label for="groupNameInput" class="form-label">Group Name</label>
+                                        <input type="text" class="form-control" id="groupNameInput" required>
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">Please provide an existing Group name.</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-11 d-flex justify-content-end p-2">
+                                        <button class="btn" data-bs-dismiss="modal">
+                                            <i class="bi bi-x-lg fs-5" style="color: red;"></i>
+                                        </button>
                                         <button class="btn" type="submit">
-                                            <i class="bi bi-check-lg" style="float:right"></i>
+                                            <i class="bi bi-check-lg fs-5" style="color: green;"></i>
                                         </button>
                                     </div>
-                                </form>
-                            </div>
+                                </div>
+                                <hr class="mt-4 mb-2" style="width:89%;">
+                                <p style="text-align:center;" class="mb-0 text-muted">REACH ME ON</p>
+                                <div class="row">
+                                    <div class="col-12 d-flex justify-content-center">
+                                        <a class="btn" href="https://github.com/clintondmello" target="_blank">
+                                            <i class="bi bi-github fs-5" style="color: black;"></i>
+                                        </a>
+                                        <a class="btn" href="https://in.linkedin.com/in/clinton-dmello-86412212b" target="_blank">
+                                            <i class="bi bi-linkedin fs-5" style="color: black;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        @RenderBody()
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-        <script>
-            (function () {
-                'use strict'
-
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.querySelectorAll('.needs-validation')
-
-                // Loop over them and prevent submission
-                Array.prototype.slice.call(forms)
-                    .forEach(function (form) {
-                        form.addEventListener('submit', function (event) {
-                            if (!form.checkValidity()) {
-                                event.preventDefault()
-                                event.stopPropagation()
-                            }
-
-                            form.classList.add('was-validated')
-                        }, false)
-                    })
-            })()
-        </script>
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
+        (function () {
+            'use strict'
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+        $(document).ready(function () {
+            $("#loginModal").on('show.bs.modal', function () {
+                $(".container-fluid").css({ "filter": "blur(1px)" })
+            });
+            $("#loginModal").on('hide.bs.modal', function () {
+                $(".container-fluid").css({ "filter": "none" })
+            });
+        });
+    </script>
 </body>
 </html>
