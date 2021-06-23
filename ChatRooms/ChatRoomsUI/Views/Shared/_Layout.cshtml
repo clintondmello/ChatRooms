@@ -131,6 +131,22 @@
                 $(".container-fluid").css({ "filter": "none" })
             });
             $('#loginModal').modal('show');
+
+            document.getElementById("sendButton").addEventListener("click", function (event) {
+                var user = document.getElementById("userInput").value;
+                var message = document.getElementById("messageInput").value;
+                connection.invoke("SendMessage", user, message).catch(function (err) {
+                    return console.error(err.toString());
+                });
+                event.preventDefault();
+                event.stopPropagation();
+            });
+
+            document.getElementById("messageInput").addEventListener("keyup", function (event) {
+                if (event.keyCode === 13) {
+                    document.getElementById("sendButton").click();
+                }
+            });
         });
     </script>
 </body>
