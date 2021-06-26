@@ -3,21 +3,90 @@
     Layout = "_Layout";
 }
 
-<div class="form-group">
-    <label for="messageInput">Message</label>
-    <input type="text" class="form-control" id="messageInput" placeholder="Enter message">
-</div>
-<button type="button" class="btn btn-primary" id="sendButton">Submit</button>
+@*<div class="form-group">
+        <label for="messageInput">Message</label>
+        <input type="text" class="form-control" id="messageInput" placeholder="Enter message">
+    </div>
+    <button type="button" class="btn btn-primary" id="sendButton">Submit</button>
 
-<div class="row">
-    <div class="col-12">
-        <hr />
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-6">
-        <ul id="messagesList"></ul>
+    <div class="row">
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>*@
+<div class="row" id="chat-container">
+    @*<div id="search-container">
+
+        </div>
+        <div id="conversation-list">
+
+        </div>
+        <div id="new-message-continer">
+
+        </div>
+        <div id="chat-title">
+
+        </div>
+        <div id="chat-message-list">
+
+        </div>
+        <div id="chat-form">
+
+        </div>*@
+    <div class="col-md-3 groupList p-0">
+        <div class="groupItem">
+            <div class="row p-2">
+                <div class="col">
+                    <p class="indigroup">Team Discussion</p>
+                    <p class="createdAt">26th July 2021</p>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col small">
+                    <p class="groupDescription">
+                        What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="groupItem active">
+            <div class="row p-2">
+                <div class="col">
+                    <p class="indigroup">Team Discussion</p>
+                    <p class="createdAt">26th July 2021</p>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    <p class="groupDescription">
+                        What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="groupItem">
+            <div class="row p-2">
+                <div class="col">
+                    <p class="indigroup">Team Discussion</p>
+                    <p class="createdAt">26th July 2021</p>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    <p class="groupDescription">
+                        What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
+    @*<div class="col-md-6 messageList">
+    </div>
+    <div class="col-md-3 profile">
+    </div>*@
 </div>
-<script src="~/js/signalr/dist/browser/signalr.js"></script>
-<script src="~/js/ChatBase.js"></script>
