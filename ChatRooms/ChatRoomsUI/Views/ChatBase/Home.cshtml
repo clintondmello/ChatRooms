@@ -21,34 +21,13 @@
     </div>*@
 
 <div class="row" id="chat-container" style="margin: 0px">
-    @*<div id="search-container">
-
-        </div>
-        <div id="conversation-list">
-
-        </div>
-        <div id="new-message-continer">
-
-        </div>
-        <div id="chat-title">
-
-        </div>
-        <div id="chat-message-list">
-
-        </div>
-        <div id="chat-form">
-
-        </div>*@
-
-    <div class="col-md-3 groupList">
+    <div class="col-md-3 groupList shadow-lg">
         <div class="row">
             <div class="col-12">
-                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    <i class="bi bi-list" style="box-shadow: black;font-size: 25px;color: white;"></i>
-                </button>
-                <h4 style="display: inline;color: white;">Groups</h4>
+                <h4 style="padding: 6px;margin: 2px;color: #000000; font-weight: 600;">Groups</h4>
             </div>
         </div>
+        <hr style="margin: 0px;"/>
         <div class="groupItem">
             <div class="row p-2">
                 <div class="col">
@@ -64,6 +43,7 @@
                 </div>
             </div>
         </div>
+        <hr style="margin: 0px;" />
         <div class="groupItem active">
             <div class="row p-2">
                 <div class="col">
@@ -79,6 +59,7 @@
                 </div>
             </div>
         </div>
+        <hr style="margin: 0px;" />
         <div class="groupItem">
             <div class="row p-2">
                 <div class="col">
@@ -92,6 +73,21 @@
                         What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
                     </p>
                 </div>
+            </div>
+        </div>
+        <hr style="margin: 0px;" />
+    </div>
+    <div class="col-md-9">
+        <div class="row" style="height: 93%;">
+        </div>
+        <div class="row">
+            <div class="col-10" style="padding-left: 4%;">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="messageInput" placeholder="Enter message">
+                </div>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" id="sendButton" style="color: black;background-color: #fca311;border-color: #d6a048;">Send <i class="bi bi-check2"></i></button>
             </div>
         </div>
     </div>

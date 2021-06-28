@@ -1,41 +1,37 @@
 ﻿html, body {
     height: 100%;
-    /*background: linear-gradient(to right, #57c1eb 0%,#246fa8 100%);*/
     place-items: center;
-    display: grid;
 }
 
 
 #chat-container {
-    /*min-width: 1200px;
-    max-width: 1200px;
-    max-height: 800px;*/
     width: 100%;
     height: 100vh;
-    background: #FFF;
-    border-radius: 10px;
+    background: #14213d;
 }
 
 .groupList {
-    background: #0048AA;
+    background: #e5e5e5;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .groupItem.active {
-    background: #0c0453;
+    background: #fca311;
 }
 
 .groupItem:hover {
-    background: #150598;
+    background: #ffba08;
 }
 
 .indigroup {
     font-weight: bold;
-    color: #eee;
+    color: #000000;
     display: inline;
 }
 
 .createdAt {
-    color: #eee;
+    color: #000000;
     float: right;
     font-size: x-small;
 }
@@ -45,7 +41,7 @@
     overflow-x: hidden;
     text-overflow: ellipsis;
     font-size: smaller;
-    color: #eee;
+    color: #000000;
 }
 
 
