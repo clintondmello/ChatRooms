@@ -15,10 +15,10 @@
     </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    <div class="container-fluid" style="padding: 0px;">
+        @*<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
             <i class="bi bi-list" style="box-shadow: black;font-size: 25px;color: black;"></i>
-        </button>
+        </button>*@
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="navBarTitle">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="navBarTitle">Settings</h5>
@@ -30,7 +30,7 @@
                 </div>
             </div>
         </div>
-        <p class="hidden" id="userInputText"></p>
+        <p class="hidden" id="userInputText" style="display: none"></p>
         @RenderBody()
     </div>
     <div class="modal fade" id="loginModal" role="dialog">

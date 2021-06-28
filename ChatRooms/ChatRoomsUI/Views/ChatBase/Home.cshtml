@@ -19,7 +19,8 @@
             <ul id="messagesList"></ul>
         </div>
     </div>*@
-<div class="row" id="chat-container">
+
+<div class="row" id="chat-container" style="margin: 0px">
     @*<div id="search-container">
 
         </div>
@@ -38,7 +39,16 @@
         <div id="chat-form">
 
         </div>*@
-    <div class="col-md-3 groupList p-0">
+
+    <div class="col-md-3 groupList">
+        <div class="row">
+            <div class="col-12">
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="bi bi-list" style="box-shadow: black;font-size: 25px;color: white;"></i>
+                </button>
+                <h4 style="display: inline;color: white;">Groups</h4>
+            </div>
+        </div>
         <div class="groupItem">
             <div class="row p-2">
                 <div class="col">
@@ -86,7 +96,7 @@
         </div>
     </div>
     @*<div class="col-md-6 messageList">
-    </div>
-    <div class="col-md-3 profile">
-    </div>*@
+        </div>
+        <div class="col-md-3 profile">
+        </div>*@
 </div>
