@@ -8,6 +8,7 @@ connection.on("RecieveMessage", function (user, message) {
     li.style = "color:white";
     document.getElementById("messagesList").appendChild(li);
     li.textContent = `${user} says ${message}`;
+    $("#groupDesc").text($('#messagesList li:last-child').text());
 });
 
 connection.on("UserJoined", function (userDetails) {
@@ -28,7 +29,8 @@ connection.on("UserDisconnected", function (user) {
 function OnSuccessValidation() {
     connection.start().then(function () {
         document.getElementById("sendButton").disabled = false;
-        connection.invoke("NewUser", { ConnectionId: connection.connectionId, UserName: document.getElementById("userInput").value, GroupName: document.getElementById("groupNameInput").value }).catch(function (err) {
+        $("#groupNameId").text($("#groupNameInput").val());
+        connection.invoke("NewUser", { ConnectionId: connection.connectionId, UserName: $("#userInput").val(), GroupName: $("#groupNameInput").val() }).catch(function (err) {
             return console.error(err.toString());
         })
     }).catch(function (err) {
