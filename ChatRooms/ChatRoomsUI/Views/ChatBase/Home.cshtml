@@ -3,23 +3,6 @@
     Layout = "_Layout";
 }
 
-@*<div class="form-group">
-        <label for="messageInput">Message</label>
-        <input type="text" class="form-control" id="messageInput" placeholder="Enter message">
-    </div>
-    <button type="button" class="btn btn-primary" id="sendButton">Submit</button>
-
-    <div class="row">
-        <div class="col-12">
-            <hr />
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6">
-            <ul id="messagesList"></ul>
-        </div>
-    </div>*@
-
 <div class="row" id="chat-container" style="margin: 0px">
     <div class="col-md-3 groupList shadow-lg">
         <div class="row">
@@ -28,7 +11,7 @@
             </div>
         </div>
         <hr style="margin: 0px;"/>
-        <div class="groupItem">
+        <div class="groupItem shadow">
             <div class="row p-2">
                 <div class="col">
                     <p class="indigroup">Team Discussion</p>
@@ -44,7 +27,7 @@
             </div>
         </div>
         <hr style="margin: 0px;" />
-        <div class="groupItem active">
+        <div class="groupItem active shadow">
             <div class="row p-2">
                 <div class="col">
                     <p class="indigroup">Team Discussion</p>
@@ -60,7 +43,7 @@
             </div>
         </div>
         <hr style="margin: 0px;" />
-        <div class="groupItem">
+        <div class="groupItem shadow">
             <div class="row p-2">
                 <div class="col">
                     <p class="indigroup">Team Discussion</p>
@@ -79,6 +62,9 @@
     </div>
     <div class="col-md-9">
         <div class="row" style="height: 93%;">
+            <div class="col-12">
+                <ul id="messagesList"></ul>
+            </div>
         </div>
         <div class="row">
             <div class="col-10" style="padding-left: 4%;">
@@ -91,8 +77,4 @@
             </div>
         </div>
     </div>
-    @*<div class="col-md-6 messageList">
-        </div>
-        <div class="col-md-3 profile">
-        </div>*@
 </div>

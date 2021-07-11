@@ -86,7 +86,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="~/js/signalr/dist/browser/signalr.js"></script>
     <script src="~/js/ChatBase.js"></script>
-    @*<script>
+    <script>
         (function () {
             'use strict'
             // Fetch all the forms we want to apply custom Bootstrap validation styles to
@@ -120,7 +120,8 @@
             document.getElementById("sendButton").addEventListener("click", function (event) {
                 var user = document.getElementById("userInput").value;
                 var message = document.getElementById("messageInput").value;
-                connection.invoke("SendMessage", user, message).catch(function (err) {
+                var group = document.getElementById("groupNameInput").value;
+                connection.invoke("SendMessage", user, message, group).catch(function (err) {
                     return console.error(err.toString());
                 });
                 event.preventDefault();
@@ -133,8 +134,7 @@
                 }
             });
         });
-    </script>*@
-    <script>
+
         $(".groupItem").click(function () {
             $(".groupItem").removeClass("active");
             $(this).addClass("active");
