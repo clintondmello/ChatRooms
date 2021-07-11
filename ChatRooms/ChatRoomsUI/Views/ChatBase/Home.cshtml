@@ -3,21 +3,62 @@
     Layout = "_Layout";
 }
 
-<div class="form-group">
-    <label for="messageInput">Message</label>
-    <input type="text" class="form-control" id="messageInput" placeholder="Enter message">
-</div>
-<button type="button" class="btn btn-primary" id="sendButton">Submit</button>
-
-<div class="row">
-    <div class="col-12">
-        <hr />
+<div class="row" id="chat-container" style="margin: 0px">
+    <div class="col-md-3 groupList shadow-lg">
+        <div class="row">
+            <div class="col-12">
+                <h4 style="padding: 6px;margin: 2px;color: #000000; font-weight: 600;">Groups</h4>
+            </div>
+        </div>
+        <hr style="margin: 0px;"/>
+        <div class="groupItem shadow">
+            <div class="row p-2">
+                <div class="col">
+                    <p class="indigroup" id="groupNameId">Group Name</p>
+                    <p class="createdAt">@DateTime.Now</p>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col small">
+                    <p class="groupDescription" id="groupDesc">
+                        What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr style="margin: 0px;" />
+        <div class="groupItem active shadow">
+            <div class="row p-2">
+                <div class="col">
+                    <p class="indigroup">Multiple Groups Coming Soon...</p>
+                    <p class="createdAt">26th July 2021</p>
+                </div>
+            </div>
+            <div class="row p-2">
+                <div class="col">
+                    <p class="groupDescription">
+                        Support for joining multiple groups comming soon.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr style="margin: 0px;" />
+    </div>
+    <div class="col-md-9">
+        <div class="row" style="height: 93%;">
+            <div class="col-12">
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10" style="padding-left: 4%;">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="messageInput" placeholder="Enter message">
+                </div>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" id="sendButton" style="color: black;background-color: #fca311;border-color: #d6a048;">Send <i class="bi bi-check2"></i></button>
+            </div>
+        </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-6">
-        <ul id="messagesList"></ul>
-    </div>
-</div>
-<script src="~/js/signalr/dist/browser/signalr.js"></script>
-<script src="~/js/ChatBase.js"></script>
