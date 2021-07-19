@@ -4,13 +4,25 @@
 }
 
 <div class="row" id="chat-container" style="margin: 0px">
+    <div class="col-2" style="background: #e5e5e5;">
+        <div class="row">
+            <div class="col-12 settings activeSetting">
+                <i class="bi bi-house"></i>
+                <p style="display: inline-block; font-weight: bold;">Home</p>
+            </div>
+            <div class="col-12 settings">
+                <i class="bi bi-sliders"></i>
+                <p style="display: inline-block;font-weight: bold;">Settings</p>
+            </div>
+        </div>
+    </div>
     <div class="col-md-3 groupList shadow-lg">
         <div class="row">
             <div class="col-12">
                 <h4 style="padding: 6px;margin: 2px;color: #000000; font-weight: 600;">Groups</h4>
             </div>
         </div>
-        <hr style="margin: 0px;"/>
+        <hr style="margin: 0px;" />
         <div class="groupItem shadow">
             <div class="row p-2">
                 <div class="col">
@@ -44,7 +56,7 @@
         </div>
         <hr style="margin: 0px;" />
     </div>
-    <div class="col-md-9">
+    <div class="col-md-7">
         <div class="row" style="height: 93%;">
             <div class="col-12">
                 <ul id="messagesList"></ul>

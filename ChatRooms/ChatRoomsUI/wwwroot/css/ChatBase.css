@@ -44,6 +44,18 @@
     color: #000000;
 }
 
+.activeSetting {
+    background: #fca311;
+}
+
+.settings {
+    padding-top: 10px;
+}
+
+    .settings:hover {
+        background: #ffba08;
+    }
+
 
 /*#search-container,
 #conversation-list
