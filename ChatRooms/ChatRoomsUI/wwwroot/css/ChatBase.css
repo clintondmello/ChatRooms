@@ -53,38 +53,11 @@
 }
 
     .settings:hover {
+        font-size: larger;
         background: #ffba08;
     }
 
 
-/*#search-container,
-#conversation-list
-#new-message-continer {
-    background: #0048AA;
+.toast-warning {
+    background-color: #9c0a0ad9 !important;
 }
-
-#search-container {
-    grid-area: search-container;
-    border-radius:10px 0 0 0;
-    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
-    z-index: 1;
-}
-
-#search-container{
-    grid-area: conversation-list;
-}
-
-
-#new-message-continer{
-    grid-area: new-message-container;
-    border-top: 1px solid rgba(0,0,0,0.25);
-    border-radius: 0 0 0 10px;
-}
-
-#chat-title, #chat-form{
-    background:#eee;
-}*/
-
-/*.groupList {
-    background: #1e306e;
-}*/
