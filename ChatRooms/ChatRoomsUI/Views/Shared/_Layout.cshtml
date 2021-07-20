@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-11 d-flex justify-content-end p-2">
-                                        <button class="btn" data-bs-dismiss="modal">
+                                        <button class="btn" data-bs-dismiss="modal" id="dismissModal">
                                             <i class="bi bi-x-lg fs-5" style="color: red;"></i>
                                         </button>
                                         <button class="btn" type="submit">
@@ -81,7 +81,7 @@
             </div>
         </div>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
@@ -103,6 +103,8 @@
                         else {
                             OnSuccessValidation();
                             $('#loginModal').modal('hide');
+                            $(".toast .toast-body").text("You are Connected!");
+                            $('.toast').removeClass("toast-warning").addClass("toast-successful").toast('show');
                         }
                         form.classList.add('was-validated');
                     }, false)
@@ -134,18 +136,55 @@
                     document.getElementById("sendButton").click();
                 }
             });
-        });
 
-        $(".groupItem").click(function () {
-            $(".groupItem").removeClass("active");
-            $(this).addClass("active");
-        });
+            $(".groupItem").click(function () {
+                $(".groupItem").removeClass("active");
+                $(this).addClass("active");
+            });
 
-        $(".settings").click(function () {
-            $(".settings").removeClass("activeSetting");
-            $(this).addClass("activeSetting");
-        });
+            $(".settings").click(function () {
+                $(".settings").removeClass("activeSetting");
+                $(this).addClass("activeSetting");
+            });
 
+            $("#dismissModal").click(function () {
+                if (connection.connectionState === "Disconnected") {
+                    $('.toast').toast('show');
+                }
+            });
+
+            $("#disconnect").click(function () {
+                try {
+                    if (connection.connectionState === "Connected") {
+                        //After Disconnect disable button also add in chat that u have left the chat;
+                        connection.stop();
+                        $("#messagesList").append('<li style="color:white">You left the chat</li>');
+                        $(".toast .toast-body").text("You have been Disconnected");
+                        $('.toast').removeClass("toast-warning").addClass("toast-successful").toast('show');
+                    }
+                    else {
+                        $(".toast .toast-body").text("You are already Disconnected!");
+                        $('.toast').removeClass("toast-warning").addClass("toast-successful").toast('show');
+                    }
+                } catch (e) {
+                    console.log(e);
+                }
+            });
+
+            $("#connect").click(function () {
+                try {
+                    if (connection.connectionState === "Disconnected") {
+                        $('#loginModal').modal('show');
+                    }
+                    else {
+                        $(".toast .toast-body").text("You already Connected!");
+                        $('.toast').removeClass("toast-warning").addClass("toast-successful").toast('show');
+                    }
+                } catch (e) {
+                    console.log(e);
+                }
+            });
+        });
     </script>
 </body>
 </html>

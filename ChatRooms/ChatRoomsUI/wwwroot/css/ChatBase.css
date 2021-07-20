@@ -57,7 +57,10 @@
         background: #ffba08;
     }
 
-
 .toast-warning {
     background-color: #9c0a0ad9 !important;
+}
+
+.toast-successful {
+    background-color: green !important;
 }

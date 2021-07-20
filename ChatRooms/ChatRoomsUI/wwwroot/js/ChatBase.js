@@ -25,7 +25,6 @@ connection.on("UserDisconnected", function (user) {
     li.textContent = `${user} left the chat`;
 });
 
-
 function OnSuccessValidation() {
     connection.start().then(function () {
         document.getElementById("sendButton").disabled = false;
@@ -37,3 +36,4 @@ function OnSuccessValidation() {
         return console.error(err.toString());
     });
 };
+
