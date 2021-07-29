@@ -117,6 +117,10 @@
             });
             $("#loginModal").on('hide.bs.modal', function () {
                 $(".container-fluid").css({ "filter": "none" })
+                if (connection.connectionState === "Disconnected") {
+                    $(".toast .toast-body").text("Not Connected.An active connection is required to send & recieve messages!");
+                    $('.toast').removeClass("toast-successful").addClass("toast-warning").toast('show');
+                }
             });
             $('#loginModal').modal('show');
 
@@ -127,6 +131,7 @@
                 connection.invoke("SendMessage", user, message, group).catch(function (err) {
                     return console.error(err.toString());
                 });
+                $("#messageInput").val("");
                 event.preventDefault();
                 event.stopPropagation();
             });
@@ -134,6 +139,7 @@
             document.getElementById("messageInput").addEventListener("keyup", function (event) {
                 if (event.keyCode === 13) {
                     document.getElementById("sendButton").click();
+                    $("#messageInput").val("");
                 }
             });
 
