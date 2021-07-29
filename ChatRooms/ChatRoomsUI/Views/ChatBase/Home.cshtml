@@ -2,49 +2,99 @@
     ViewData["Title"] = "Home";
     Layout = "_Layout";
 }
-
 <div class="row" id="chat-container" style="margin: 0px">
-    <div class="col-md-3 groupList shadow-lg">
+    <div class="col-2" style="background: #e5e5e5;">
         <div class="row">
-            <div class="col-12">
-                <h4 style="padding: 6px;margin: 2px;color: #000000; font-weight: 600;">Groups</h4>
+            <div class="col-12 p-0">
+                <img src="~/images/Banner.jpg" style="height:164px; width:100%" />
             </div>
         </div>
-        <hr style="margin: 0px;"/>
-        <div class="groupItem shadow">
-            <div class="row p-2">
-                <div class="col">
-                    <p class="indigroup" id="groupNameId">Group Name</p>
-                    <p class="createdAt">@DateTime.Now</p>
-                </div>
+        <div class="row">
+            <div class="col-12 settings activeSetting">
+                <i class="bi bi-house"></i>
+                <p style="display: inline-block; font-weight: bold;">Home</p>
+                <i class="bi bi-box-arrow-right" style="float: right;"></i>
             </div>
-            <div class="row p-2">
-                <div class="col small">
-                    <p class="groupDescription" id="groupDesc">
-                        What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
-                    </p>
+            <div class="col-12 settings">
+                <i class="bi bi-easel"></i>
+                <p style="display: inline-block; font-weight: bold;">Whiteboard</p>
+                <i class="bi bi-box-arrow-right" style="float: right;"></i>
+            </div>
+            <div class="col-12 settings">
+                <i class="bi bi-sliders"></i>
+                <p style="display: inline-block;font-weight: bold;">Settings</p>
+                <i class="bi bi-box-arrow-right" style="float: right;"></i>
+            </div>
+            <div class="col-12 settings" id="connect">
+                <i class="bi bi-power"></i>
+                <p style="display: inline-block;font-weight: bold;">Connect</p>
+                <i class="bi bi-box-arrow-right" style="float: right;"></i>
+            </div>
+            <div class="col-12 settings" id="disconnect">
+                <i class="bi bi-power"></i>
+                <p style="display: inline-block;font-weight: bold;">Disconnect</p>
+                <i class="bi bi-box-arrow-right" style="float: right;"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 groupList shadow-lg">
+        <hr style="margin: 0px;" />
+        <div class="groupItem shadow">
+            <div class="row">
+                <div class="col-2">
+                    <img src="~/images/G.png" style="height:60px; padding-top:20%;padding-left:20%;margin-top:20%" />
+                </div>
+                <div class="col-10">
+                    <div class="row p-2">
+                        <div class="col">
+                            <p class="indigroup" id="groupNameId">Group Name</p>
+                            <p class="createdAt">@DateTime.Now</p>
+                        </div>
+                    </div>
+                    <div class="row p-2">
+                        <div class="col small">
+                            <p class="groupDescription" id="groupDesc">
+                                What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <hr style="margin: 0px;" />
         <div class="groupItem active shadow">
-            <div class="row p-2">
-                <div class="col">
-                    <p class="indigroup">Multiple Groups Coming Soon...</p>
-                    <p class="createdAt">26th July 2021</p>
+            <div class="row">
+                <div class="col-2">
+                    <img src="~/images/G.png" style="height:60px; padding-top:20%;padding-left:20%;margin-top:20%" />
                 </div>
-            </div>
-            <div class="row p-2">
-                <div class="col">
-                    <p class="groupDescription">
-                        Support for joining multiple groups comming soon.
-                    </p>
+                <div class="col-10">
+                    <div class="row p-2">
+                        <div class="col">
+                            <p class="indigroup">Multiple Groups Upcoming</p>
+                            <p class="createdAt">26th July 2021</p>
+                        </div>
+                    </div>
+                    <div class="row p-2">
+                        <div class="col">
+                            <p class="groupDescription">
+                                Support for joining multiple groups comming soon.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <hr style="margin: 0px;" />
     </div>
-    <div class="col-md-9">
+    <div class="col-md-7">
+        <div class="toast toast-warning align-items-center text-white border-0 top-0 end-0" style="float:right" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Not Connected. An active connection is required to send & recieve messages!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
         <div class="row" style="height: 93%;">
             <div class="col-12">
                 <ul id="messagesList"></ul>

@@ -44,35 +44,23 @@
     color: #000000;
 }
 
-
-/*#search-container,
-#conversation-list
-#new-message-continer {
-    background: #0048AA;
+.activeSetting {
+    background: #fca311;
 }
 
-#search-container {
-    grid-area: search-container;
-    border-radius:10px 0 0 0;
-    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
-    z-index: 1;
+.settings {
+    padding-top: 10px;
 }
 
-#search-container{
-    grid-area: conversation-list;
+    .settings:hover {
+        font-size: larger;
+        background: #ffba08;
+    }
+
+.toast-warning {
+    background-color: #9c0a0ad9 !important;
 }
 
-
-#new-message-continer{
-    grid-area: new-message-container;
-    border-top: 1px solid rgba(0,0,0,0.25);
-    border-radius: 0 0 0 10px;
+.toast-successful {
+    background-color: green !important;
 }
-
-#chat-title, #chat-form{
-    background:#eee;
-}*/
-
-/*.groupList {
-    background: #1e306e;
-}*/
