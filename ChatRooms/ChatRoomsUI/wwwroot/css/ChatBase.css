@@ -64,3 +64,13 @@
 .toast-successful {
     background-color: green !important;
 }
+
+.groupContainer {
+    height: 100%;
+    display: none;
+}
+
+.whiteboardContent{
+    height:100%;
+    background-color:white;
+}

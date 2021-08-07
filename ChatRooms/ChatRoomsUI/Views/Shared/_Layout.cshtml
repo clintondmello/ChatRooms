@@ -148,9 +148,19 @@
                 $(this).addClass("active");
             });
 
-            $(".settings").click(function () {
+            $(".settings").click(function (ev) {
+                debugger;
                 $(".settings").removeClass("activeSetting");
                 $(this).addClass("activeSetting");
+                let tabType = $(this).data('tab-type');
+                if (tabType==="home") {
+                    $(".groupContainer").show();
+                    $(".whiteboardContent").hide();
+                }
+                if (tabType === "whiteboard") {
+                    $(".groupContainer").hide();
+                    $(".whiteboardContent").show();
+                }
             });
 
             $("#dismissModal").click(function () {
@@ -190,6 +200,13 @@
                     console.log(e);
                 }
             });
+
+            var c = document.getElementById('myCanvas');
+            var ctx = c.getContext('2d');
+            ctx.beginPath();
+            ctx.moveTo(0, 20);
+            ctx.lineTo(50, 100);
+            ctx.stroke();
         });
     </script>
 </body>
